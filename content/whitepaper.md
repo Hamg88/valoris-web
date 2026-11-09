@@ -1,5 +1,5 @@
 # $VALORIS
-## Un Token de Reconocimiento, Reparación y Recuperación para las Víctimas del Bullying
+## Un Registro de Reconocimiento para las Víctimas del Bullying — y el token que puede seguirlo
 ### Whitepaper v2.1
 
 ---
@@ -122,7 +122,7 @@ $VALORIS exists to close this gap.
 
 ## 4. The Solution: $VALORIS
 
-$VALORIS is a decentralized cryptocurrency built on the Solana blockchain, designed specifically for everyone affected by bullying — victims, survivors, parents, reformed aggressors, and allies.
+$VALORIS is a public recognition registry built on the Solana blockchain, designed for everyone affected by bullying — victims, survivors, parents, reformed aggressors, and allies.
 
 The name is intentional and bilingual:
 - In **English**: valor means courage — the courage it takes to survive, to speak, to heal.
@@ -187,6 +187,8 @@ People who were never victims or aggressors but who believe bullying is wrong an
 ---
 
 ## 6. Tokenomics
+
+*This section applies only if Phase 3 launches. The token is gated behind three public thresholds — 500 active members, 2 collaborators with defined roles, 50 recognitions recorded. Until then, there is no token; the registry (section 5) operates on its own.*
 
 **Total Supply: 1,000,000,000 $VALORIS** — One Billion tokens. Fixed. No inflation. No additional minting. Ever.
 
