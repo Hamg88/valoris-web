@@ -1,6 +1,6 @@
 # $VALORIS
 ## Un Token de Reconocimiento, Reparación y Recuperación para las Víctimas del Bullying
-### Whitepaper v2.0
+### Whitepaper v2.1
 
 ---
 
@@ -223,34 +223,28 @@ This is not a promise. It is a blockchain guarantee — no one can disable or re
 
 ## 7. Roadmap
 
-### Phase 0 — Foundation (Now)
-- Whitepaper publication
-- Social presence: X (Twitter), Telegram, Discord
-- Community building around the cause — victims, parents, survivors, allies
-- Launching the human story before the token
+*Updated November 2026. The registry comes first; the token is gated behind three public thresholds.*
 
-### Phase 1 — Token Launch
-- Deploy $VALORIS on Solana using Token-2022 standard
-- Initial DEX listing
-- First public recognition transactions — documented and shared
-- Community presale to fund initial liquidity (community-owned from day one)
+### Phase 1 — Recognition Registry (now)
+- Anyone can send a permanent, non-transferable on-chain recognition to a victim
+- Free for the sender — VALORIS sponsors the network cost from a public sponsor wallet
+- Public registry page; public Therapy Fund wallet for ally donations
+- No token involved
 
-### Phase 2 — Ecosystem Growth
-- Formal partnerships with anti-bullying organizations and mental health professionals
-- Recognition campaign: #IRecognizeYou / #TeReconozco
-- Media outreach — the story that no crypto project has told before
-- First quarterly transparency report on Operations Fund usage
+### Phase 2 — Community & Collaborators
+- Reach three public thresholds: 500 active members · 2 collaborators with defined roles · 50 recognitions recorded
+- Onboard mental-health professionals, survivors with a voice, and a technical collaborator
+- Content in monthly batches; recognition campaign #IRecognizeYou / #TeReconozco
 
-### Phase 3 — The Foundation
-- Establish the $VALORIS Foundation as a legal entity
-- Deploy Therapy Foundation Fund to provide psychological care in schools
+### Phase 3 — Token (gated)
+- Launches only when all three thresholds are met
+- Solana Token-2022 with the 1.5% transfer fee to the Therapy Fund, as described in section 6
+- If the thresholds are never met, the registry keeps working without a token
+
+### Phase 4 — The Foundation
+- Establish the Therapy Fund as a legal entity
 - First funded therapy sessions — fully transparent, on-chain traceable
 - Annual public impact report: how many children received care
-
-### Phase 4 — Scale
-- Multilingual recognition platform
-- Integration with mental health platforms and educational institutions
-- $VALORIS as global infrastructure for bullying reparation and recognition
 
 ---
 
@@ -302,4 +296,4 @@ This is $VALORIS.
 
 *$VALORIS is not a registered security and this whitepaper is not financial advice. $VALORIS is not an investment and not a substitute for professional mental health care. Cryptocurrency carries significant risk; never spend more than you can afford to lose. If you or someone you know is in crisis, please reach out to a qualified mental health professional or a local crisis line. Victims receive recognition freely and are never asked to purchase anything. The financial side of this project is carried by allies and supporters who understand and accept that risk.*
 
-*Whitepaper v2.0 — Built on Solana. Built for humans.*
+*Whitepaper v2.1 — Built on Solana. Built for humans.*

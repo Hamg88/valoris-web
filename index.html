@@ -99,6 +99,43 @@
     .d3   { transition-delay: 0.3s; }
     .d4   { transition-delay: 0.4s; }
 
+    /* ─── NOV 2026: STATUS / GATES ───────────────────────────────── */
+    #status { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .status-lead { font-size: clamp(1rem, 1.9vw, 1.2rem); color: rgba(255,255,255,0.78); line-height: 1.72; max-width: 62ch; }
+    .gates { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); margin: 3rem 0 2rem; }
+    .gate { background: var(--black); padding: 2.25rem 2rem; }
+    .gate-n { font-size: clamp(2rem, 4.5vw, 3.2rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1; margin-bottom: 0.75rem; }
+    .gate-cur { color: var(--coral); }
+    .gate-sep { color: rgba(255,255,255,0.3); margin: 0 0.1em; }
+    .gate-l { font-size: 0.875rem; color: rgba(255,255,255,0.62); line-height: 1.5; }
+    .status-note { font-size: 0.9rem; color: rgba(255,255,255,0.5); line-height: 1.7; max-width: 58ch; }
+    @media (max-width: 760px) { .gates { grid-template-columns: 1fr; } }
+
+    /* ─── NOV 2026: WHY NOT A TEXT ───────────────────────────────── */
+    .why-lead { font-size: clamp(1rem, 1.9vw, 1.2rem); color: rgba(255,255,255,0.78); line-height: 1.72; max-width: 62ch; }
+    .why-list { list-style: none; margin: 2.75rem 0; display: grid; gap: 0; border-top: 1px solid var(--border); max-width: 820px; }
+    .why-list li { padding: 1.4rem 0 1.4rem 2rem; border-bottom: 1px solid var(--border); font-size: 0.975rem; color: rgba(255,255,255,0.72); line-height: 1.7; position: relative; }
+    .why-list li::before { content: ""; position: absolute; left: 0; top: 2.05rem; width: 0.6rem; height: 2px; background: var(--coral); }
+    .why-close { font-size: clamp(1.1rem, 2.2vw, 1.5rem); font-weight: 700; letter-spacing: -0.02em; line-height: 1.4; max-width: 40ch; }
+
+    /* ─── NOV 2026: TRANSPARENCY ─────────────────────────────────── */
+    #transparency { background: var(--surface); border-top: 1px solid var(--border); }
+    .wallets { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); margin-top: 2.5rem; }
+    .wallet { background: var(--black); padding: 2.25rem; }
+    .wallet-tag { font-size: 0.65rem; font-weight: 800; letter-spacing: 0.22em; text-transform: uppercase; color: var(--coral); margin-bottom: 1rem; }
+    .wallet-desc { font-size: 0.9rem; color: rgba(255,255,255,0.62); line-height: 1.7; margin-bottom: 1.25rem; }
+    .wallet-addr { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.78rem; color: rgba(255,255,255,0.45); padding: 0.75rem 1rem; border: 1px dashed rgba(255,255,255,0.18); word-break: break-all; }
+    @media (max-width: 760px) { .wallets { grid-template-columns: 1fr; } }
+
+    /* ─── NOV 2026: HERO / FOOTER ADDITIONS ──────────────────────── */
+    .hero-tagline-2 { margin-top: -0.5rem; color: rgba(255,255,255,0.5); }
+    .btn-soon { opacity: 0.55; cursor: default; border-style: dashed; }
+    .btn-soon:hover { border-color: rgba(255,255,255,0.25); color: rgba(255,255,255,0.7); }
+    .footer-crisis { margin: 2rem 0 2.5rem; padding: 1.25rem 1.5rem; border-left: 2px solid var(--coral); background: var(--coral-dim); }
+    .footer-crisis h4 { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--coral); margin-bottom: 0.5rem; }
+    .footer-crisis p { font-size: 0.85rem; color: rgba(255,255,255,0.72); line-height: 1.7; }
+    .footer-crisis a { text-decoration: underline; text-underline-offset: 3px; }
+
     /* ─── BILINGUAL SYSTEM ──────────────────────────────────────── */
     /* Inline short text */
     .t-es { display: none; }
@@ -545,7 +582,8 @@
     <div class="nav-links">
       <a href="#story"><span class="t-en">Story</span><span class="t-es">Historia</span></a>
       <a href="#what"><span class="t-en">Mission</span><span class="t-es">Misión</span></a>
-      <a href="#tokenomics">Token</a>
+      <a href="#status"><span class="t-en">Status</span><span class="t-es">Estado</span></a>
+      <a href="#transparency"><span class="t-en">Transparency</span><span class="t-es">Transparencia</span></a>
       <a href="#roadmap"><span class="t-en">Roadmap</span><span class="t-es">Hoja de Ruta</span></a>
       <a href="https://x.com/VALORIStoken" target="_blank" rel="noopener noreferrer">X</a>
       <a href="https://t.me/valoristoken" target="_blank" rel="noopener noreferrer">Telegram</a>
@@ -565,12 +603,16 @@
       <span class="t-es">Reconocimiento<br><em>en cadena.</em></span>
     </h1>
     <p class="hero-sub">
-      <span class="t-en">A token of recognition for bullying victims. Built on Solana.</span>
-      <span class="t-es">Un token de reconocimiento para víctimas de bullying. Construido en Solana.</span>
+      <span class="t-en">A permanent record of recognition for bullying victims. Built on Solana.</span>
+      <span class="t-es">Un registro permanente de reconocimiento para víctimas de bullying. Construido en Solana.</span>
     </p>
     <p class="hero-tagline">
       <span class="t-en">Your suffering had valor. Now it has proof.</span>
       <span class="t-es">Tu sufrimiento tuvo valor. Ahora tiene prueba.</span>
+    </p>
+    <p class="hero-tagline hero-tagline-2">
+      <span class="t-en">Recognition is permanent. The price is not.</span>
+      <span class="t-es">El reconocimiento es permanente. El precio no.</span>
     </p>
     <div class="hero-ctas">
       <a href="/whitepaper" class="btn btn-solid">
@@ -585,6 +627,9 @@
       <a href="https://x.com/VALORIStoken" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
         <span class="t-en">Follow on X</span><span class="t-es">Seguir en X</span>
       </a>
+      <span class="btn btn-ghost btn-soon" aria-disabled="true" title="Phase 1">
+        <span class="t-en">Send a recognition — coming in Phase 1</span><span class="t-es">Enviar un reconocimiento — próximamente</span>
+      </span>
     </div>
     <div class="hero-scroll" aria-hidden="true">
       <div class="scroll-bar"></div>
@@ -627,6 +672,46 @@
           <p>$VALORIS nació de esa historia. La mía. Y la de cientos de millones que nunca tuvieron con quién contarla.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ── WHERE WE ARE ─────────────────────────────────────────────── -->
+  <section id="status" aria-labelledby="status-heading">
+    <div class="wrap">
+      <p class="eyebrow r">
+        <span class="t-en">Where we are</span>
+        <span class="t-es">Dónde estamos</span>
+      </p>
+      <h2 id="status-heading" class="h2 r">
+        <span class="t-en">November 2026.</span>
+        <span class="t-es">Noviembre 2026.</span>
+      </h2>
+      <div class="rule r"></div>
+
+      <p class="status-lead r">
+        <span class="t-en">The website is live. The token has not launched, and it will not launch until three public conditions are met. Until then we are building the one thing that matters: the recognition registry. It launches first, free to use, with no token involved.</span>
+        <span class="t-es">El sitio está en línea. El token no ha salido, y no saldrá hasta que se cumplan tres condiciones públicas. Hasta entonces construimos lo único que importa: el registro de reconocimiento. Sale primero, gratis, sin ningún token de por medio.</span>
+      </p>
+
+      <div class="gates">
+        <div class="gate r d1">
+          <p class="gate-n"><span class="gate-cur" data-gate="members">0</span><span class="gate-sep">/</span>500</p>
+          <p class="gate-l"><span class="t-en">active community members</span><span class="t-es">miembros activos en la comunidad</span></p>
+        </div>
+        <div class="gate r d2">
+          <p class="gate-n"><span class="gate-cur" data-gate="collaborators">0</span><span class="gate-sep">/</span>2</p>
+          <p class="gate-l"><span class="t-en">collaborators with defined roles — mental health, survivor voice, or technical</span><span class="t-es">colaboradores con rol definido — salud mental, voz de sobreviviente o técnico</span></p>
+        </div>
+        <div class="gate r d3">
+          <p class="gate-n"><span class="gate-cur" data-gate="recognitions">0</span><span class="gate-sep">/</span>50</p>
+          <p class="gate-l"><span class="t-en">recognitions recorded on-chain</span><span class="t-es">reconocimientos grabados en cadena</span></p>
+        </div>
+      </div>
+
+      <p class="status-note r">
+        <span class="t-en">If the conditions are never met, the registry keeps working without a token. The good does not depend on it.</span>
+        <span class="t-es">Si las condiciones nunca se cumplen, el registro sigue funcionando sin token. El bien no depende de él.</span>
+      </p>
     </div>
   </section>
 
@@ -918,8 +1003,8 @@
 
       <div class="honest r">
         <p>
-          <span class="t-en"><strong>An honest note:</strong> $VALORIS is a mission-driven community project, <strong>not a nonprofit</strong> — the founder is compensated for building it. Only the Therapy Foundation Fund is charitable. We state this plainly; it is what makes the project unattackable.</span>
-          <span class="t-es"><strong>Una nota honesta:</strong> $VALORIS es un proyecto comunitario impulsado por una misión, <strong>no una organización sin fines de lucro</strong> — el fundador recibe compensación por construirlo. Solo el Fondo de la Fundación Terapéutica es caritativo. Lo declaramos abiertamente; eso es lo que hace que el proyecto sea inexpugnable.</span>
+          <span class="t-en"><strong>An honest note:</strong> $VALORIS is a mission-driven community project, <strong>not a nonprofit</strong> — the founder is compensated for building it. Only the Therapy Foundation Fund is charitable. We would rather you know this up front.</span>
+          <span class="t-es"><strong>Una nota honesta:</strong> $VALORIS es un proyecto comunitario impulsado por una misión, <strong>no una organización sin fines de lucro</strong> — el fundador recibe compensación por construirlo. Solo el Fondo de la Fundación Terapéutica es caritativo. Preferimos que lo sepas desde el inicio.</span>
         </p>
       </div>
     </div>
@@ -940,44 +1025,118 @@
 
       <div class="phases">
         <div class="phase r">
-          <p class="phase-tag">Phase 0</p>
-          <h3><span class="t-en">Community</span><span class="t-es">Comunidad</span></h3>
+          <p class="phase-tag"><span class="t-en">Phase 1 — now</span><span class="t-es">Fase 1 — ahora</span></p>
+          <h3><span class="t-en">Recognition Registry</span><span class="t-es">Registro de Reconocimiento</span></h3>
           <p>
-            <span class="t-en">Build the community, spread awareness, and onboard survivors, parents, and allies. Establish the foundation of trust and shared mission before any token moves.</span>
-            <span class="t-es">Construir la comunidad, difundir la conciencia y sumar a sobrevivientes, padres y aliados. Establecer la base de confianza y misión compartida antes de que cualquier token se mueva.</span>
+            <span class="t-en">Anyone can send a permanent on-chain recognition to a victim. Free for the sender — VALORIS sponsors the network cost. A public registry page, a public sponsor wallet, and a public Therapy Fund wallet. No token involved.</span>
+            <span class="t-es">Cualquiera puede enviar un reconocimiento permanente en cadena a una víctima. Gratis para quien envía — VALORIS cubre el costo de red. Una página pública del registro, una wallet patrocinadora pública y una wallet pública del Fondo de Terapias. Sin ningún token de por medio.</span>
           </p>
         </div>
         <div class="phase r">
-          <p class="phase-tag">Phase 1</p>
-          <h3><span class="t-en">Launch</span><span class="t-es">Lanzamiento</span></h3>
+          <p class="phase-tag"><span class="t-en">Phase 2</span><span class="t-es">Fase 2</span></p>
+          <h3><span class="t-en">Community &amp; Collaborators</span><span class="t-es">Comunidad y Colaboradores</span></h3>
           <p>
-            <span class="t-en">Token launch on Solana mainnet. Initial liquidity provision. First on-chain recognition transactions. The 1.5% fee mechanism activates and the Therapy Foundation Fund begins accumulating.</span>
-            <span class="t-es">Lanzamiento del token en Solana mainnet. Provisión inicial de liquidez. Primeras transacciones de reconocimiento en cadena. El mecanismo de tarifa del 1.5% se activa y el Fondo de la Fundación Terapéutica comienza a acumularse.</span>
+            <span class="t-en">Reach the three public thresholds. Onboard mental-health professionals, survivors with a voice, and a technical collaborator. Content in monthly batches, not daily presence.</span>
+            <span class="t-es">Alcanzar las tres condiciones públicas. Sumar profesionales de salud mental, sobrevivientes con voz propia y un colaborador técnico. Contenido en lotes mensuales, no presencia diaria.</span>
           </p>
         </div>
         <div class="phase r">
-          <p class="phase-tag">Phase 2</p>
-          <h3><span class="t-en">Ecosystem</span><span class="t-es">Ecosistema</span></h3>
+          <p class="phase-tag"><span class="t-en">Phase 3 — gated</span><span class="t-es">Fase 3 — condicionada</span></p>
+          <h3><span class="t-en">Token</span><span class="t-es">Token</span></h3>
           <p>
-            <span class="t-en">Partner with NGOs, psychologists, and schools. Build recognition tooling — simple interfaces for sending and receiving on-chain recognition messages. Expand the ally network globally.</span>
-            <span class="t-es">Alianzas con ONGs, psicólogos y escuelas. Construir herramientas de reconocimiento — interfaces simples para enviar y recibir mensajes de reconocimiento en cadena. Expandir la red de aliados globalmente.</span>
+            <span class="t-en">Launches only when all three thresholds are met. Solana Token-2022 with the 1.5% fee to the Therapy Fund, as described in the whitepaper. If the thresholds are not met, the registry keeps working without it.</span>
+            <span class="t-es">Sale únicamente cuando se cumplan las tres condiciones. Solana Token-2022 con la tarifa del 1.5% al Fondo de Terapias, como describe el whitepaper. Si las condiciones no se cumplen, el registro sigue funcionando sin él.</span>
           </p>
         </div>
         <div class="phase r">
-          <p class="phase-tag">Phase 3</p>
+          <p class="phase-tag"><span class="t-en">Phase 4</span><span class="t-es">Fase 4</span></p>
           <h3><span class="t-en">Foundation</span><span class="t-es">Fundación</span></h3>
           <p>
-            <span class="t-en">Establish the Therapy Foundation Fund as a legal entity. Begin disbursements — real therapy for real children in schools. The 24-month lock on the Foundation allocation begins releasing.</span>
-            <span class="t-es">Constituir el Fondo de la Fundación Terapéutica como entidad legal. Iniciar los desembolsos — terapia real para niños reales en las escuelas. El bloqueo de 24 meses de la asignación del Fondo comienza a liberarse.</span>
+            <span class="t-en">A legal entity for the Therapy Fund. First funded therapy sessions, traceable on-chain. An annual public impact report: how many children received care.</span>
+            <span class="t-es">Una entidad legal para el Fondo de Terapias. Primeras sesiones de terapia financiadas, trazables en cadena. Un informe público anual de impacto: cuántos niños recibieron atención.</span>
           </p>
         </div>
-        <div class="phase r">
-          <p class="phase-tag">Phase 4</p>
-          <h3><span class="t-en">Scale</span><span class="t-es">Escala</span></h3>
-          <p>
-            <span class="t-en">Expand globally. Build the full platform — recognition system, foundation dashboard, institutional partnerships. The mission operates at scale, independent of any single founder.</span>
-            <span class="t-es">Expansión global. Construir la plataforma completa — sistema de reconocimiento, panel de la fundación, alianzas institucionales. La misión opera a escala, independiente de cualquier fundador.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WHY NOT A TEXT ───────────────────────────────────────────── -->
+  <section id="why" aria-labelledby="why-heading">
+    <div class="wrap">
+      <p class="eyebrow r">
+        <span class="t-en">A fair question</span>
+        <span class="t-es">Una pregunta justa</span>
+      </p>
+      <h2 id="why-heading" class="h2 r">
+        <span class="t-en">Why not just send a text?</span>
+        <span class="t-es">¿Por qué no mandar un mensaje y ya?</span>
+      </h2>
+      <div class="rule r"></div>
+
+      <p class="why-lead r">
+        <span class="t-en">For private comfort, a text is enough — and VALORIS does not replace it. VALORIS exists for what a text cannot do.</span>
+        <span class="t-es">Para el consuelo privado, un mensaje basta — y VALORIS no lo reemplaza. VALORIS existe para lo que un mensaje no puede hacer.</span>
+      </p>
+
+      <ul class="why-list">
+        <li class="r d1">
+          <span class="t-en">A text dies with the phone. A recognition here outlives everyone involved.</span>
+          <span class="t-es">Un mensaje muere con el teléfono. Un reconocimiento aquí sobrevive a todos los involucrados.</span>
+        </li>
+        <li class="r d1">
+          <span class="t-en">Bullying was public; a text is private. A recognition here can be public, if the victim wants.</span>
+          <span class="t-es">El bullying fue público; un mensaje es privado. Un reconocimiento aquí puede ser público, si la víctima quiere.</span>
+        </li>
+        <li class="r d2">
+          <span class="t-en">A text can be deleted or denied. A recognition here is dated and signed, and cannot be altered.</span>
+          <span class="t-es">Un mensaje se puede borrar o negar. Un reconocimiento aquí tiene fecha y firma, y no se puede alterar.</span>
+        </li>
+        <li class="r d2">
+          <span class="t-en">A thousand texts are a thousand isolated acts. A thousand recognitions here are visible proof that this happened to real people — and real people recognized it.</span>
+          <span class="t-es">Mil mensajes son mil actos aislados. Mil reconocimientos aquí son prueba visible de que esto le pasó a personas reales — y personas reales lo reconocieron.</span>
+        </li>
+        <li class="r d3">
+          <span class="t-en">Most recognitions that should happen never do — not for lack of will, but for lack of a place and a moment. VALORIS is the place.</span>
+          <span class="t-es">La mayoría de los reconocimientos que deberían darse nunca se dan — no por falta de voluntad, sino de lugar y momento. VALORIS es el lugar.</span>
+        </li>
+      </ul>
+
+      <p class="why-close r">
+        <span class="t-en">The honest comparison is not “a text vs. VALORIS.” It is “nothing vs. VALORIS.”</span>
+        <span class="t-es">La comparación honesta no es “un mensaje versus VALORIS”. Es “nada versus VALORIS”.</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ── TRANSPARENCY ─────────────────────────────────────────────── -->
+  <section id="transparency" aria-labelledby="transparency-heading">
+    <div class="wrap">
+      <p class="eyebrow r">
+        <span class="t-en">Transparency</span>
+        <span class="t-es">Transparencia</span>
+      </p>
+      <h2 id="transparency-heading" class="h2 r">
+        <span class="t-en">Two public wallets. Nothing hidden.</span>
+        <span class="t-es">Dos wallets públicas. Nada oculto.</span>
+      </h2>
+      <div class="rule r"></div>
+
+      <div class="wallets">
+        <div class="wallet r d1">
+          <p class="wallet-tag"><span class="t-en">Sponsor wallet</span><span class="t-es">Wallet patrocinadora</span></p>
+          <p class="wallet-desc">
+            <span class="t-en">Pays the network cost of every recognition so the sender pays nothing. About 0.0025 SOL each — $20 covers roughly 100 recognitions.</span>
+            <span class="t-es">Cubre el costo de red de cada reconocimiento para que quien envía no pague nada. Unos 0.0025 SOL cada uno — $20 cubren unos 100 reconocimientos.</span>
           </p>
+          <p class="wallet-addr" data-wallet="sponsor"><span class="t-en">Address published at Phase 1 launch</span><span class="t-es">Dirección publicada al lanzar la Fase 1</span></p>
+        </div>
+        <div class="wallet r d2">
+          <p class="wallet-tag"><span class="t-en">Therapy Fund wallet</span><span class="t-es">Wallet del Fondo de Terapias</span></p>
+          <p class="wallet-desc">
+            <span class="t-en">Donations from allies. Every balance and every disbursement is visible on-chain, in real time, to anyone.</span>
+            <span class="t-es">Donaciones de aliados. Cada saldo y cada desembolso es visible en cadena, en tiempo real, para cualquiera.</span>
+          </p>
+          <p class="wallet-addr" data-wallet="fund"><span class="t-en">Address published at Phase 1 launch</span><span class="t-es">Dirección publicada al lanzar la Fase 1</span></p>
         </div>
       </div>
     </div>
@@ -1002,13 +1161,21 @@
     <div class="footer-disclaimer">
       <h4>Disclaimer</h4>
       <p class="tb-en">$VALORIS is not a registered security and this is not financial advice. It is not an investment and not a substitute for professional mental health care. Cryptocurrency carries significant risk; never spend more than you can afford to lose. If you or someone you know is in crisis, please reach out to a qualified mental health professional or a local crisis line. Victims receive recognition freely and are never asked to purchase anything.</p>
-      <p class="tb-es">$VALORIS no es un valor registrado y esto no es asesoramiento financiero. No es una inversión ni un sustituto de la atención profesional de salud mental. Las criptomonedas conllevan un riesgo significativo; nunca inviertas más de lo que puedas permitirte perder. Si tú o alguien que conoces está en crisis, por favor comunícate con un profesional de salud mental calificado o una línea de crisis local. Las víctimas reciben reconocimiento gratuitamente y nunca se les pide comprar nada.</p>
+      <p class="tb-es">$VALORIS no es un valor registrado y esto no es asesoramiento financiero. No es una inversión ni un sustituto de la atención profesional de salud mental. Las criptomonedas conllevan un riesgo significativo; nunca gastes más de lo que puedas permitirte perder. Si tú o alguien que conoces está en crisis, por favor comunícate con un profesional de salud mental calificado o una línea de crisis local. Las víctimas reciben reconocimiento gratuitamente y nunca se les pide comprar nada.</p>
+    </div>
+
+    <div class="footer-crisis">
+      <h4><span class="t-en">If you are in crisis</span><span class="t-es">Si estás en crisis</span></h4>
+      <p>
+        <span class="t-en">Please reach a real person now. International directory: <a href="https://findahelpline.com" target="_blank" rel="noopener noreferrer">findahelpline.com</a> · United States: call or text <strong>988</strong> · Elsewhere: your local emergency number.</span>
+        <span class="t-es">Por favor habla con una persona real ahora. Directorio internacional: <a href="https://findahelpline.com" target="_blank" rel="noopener noreferrer">findahelpline.com</a> · Estados Unidos: llama o escribe al <strong>988</strong> · En otros países: tu número local de emergencias.</span>
+      </p>
     </div>
 
     <div class="footer-bottom">
       <p>
-        <span class="t-en">&copy; 2025 VALORIS. Built on Solana.</span>
-        <span class="t-es">&copy; 2025 VALORIS. Construido en Solana.</span>
+        <span class="t-en">&copy; 2026 VALORIS. Built on Solana.</span>
+        <span class="t-es">&copy; 2026 VALORIS. Construido en Solana.</span>
       </p>
       <p>
         <span class="t-en">Recognition is permanent. The price is not.</span>
